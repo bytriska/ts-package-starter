@@ -15,7 +15,7 @@ A modern TypeScript starter template for quickly bootstrapping new projects with
 
 1. **Clone this template:**
   ```bash
-  git clone https://github.com/your-username/ts-package-starter.git
+  git clone https://github.com/bytriska/ts-package-starter.git
   cd ts-package-starter
   ```
 
