@@ -7,39 +7,41 @@ A modern TypeScript starter template for quickly bootstrapping new projects with
 - TypeScript support
 - Pre-configured build scripts (ESM & CJS)
 - Linting and formatting (ESLint, Prettier)
-- Unit testing (Jest)
+- Unit testing (Vitest)
 - Typedoc documentation
 - GitHub Actions CI workflow
 
 ## Getting Started
 
 1. **Clone this template:**
-  ```bash
-  git clone https://github.com/bytriska/ts-package-starter.git
-  cd ts-package-starter
-  ```
+
+```bash
+git clone https://github.com/bytriska/ts-package-starter.git
+cd ts-package-starter
+```
 
 2. **Install pnpm (if not already installed):**
-  ```bash
-  corepack enable
-  corepack prepare pnpm@latest --activate
-  ```
+
+```bash
+corepack enable
+corepack prepare pnpm@latest --activate
+```
 
 3. **Install dependencies:**
-  ```bash
-  pnpm install
-  ```
+
+```bash
+pnpm install
+```
 
 4. **Start building your project:**
-  - Edit the source files in `src/`
-  - Update `package.json` and other configs as needed
+
+- Edit the source files in `src/`
+- Update `package.json` and other configs as needed
 
 5. **Run scripts:**
-  - Build: `pnpm build`
-  - Test: `pnpm test`
-  - Lint: `pnpm lint`
-  - Format: `pnpm format`
-  - Docs: `pnpm docs`
+
+- Build: `pnpm build`
+- Test: `pnpm test`
 
 ## Usage
 

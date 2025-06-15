@@ -1,19 +1,14 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "lib": [
-      "ESNext",
-      "DOM"
-    ],
+    "lib": ["ESNext"],
     "module": "ESNext",
     "moduleResolution": "Bundler",
     "resolveJsonModule": true,
-    "allowJs": true,
     "strict": true,
-    "strictNullChecks": true,
     "noEmit": true,
     "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
+    "verbatimModuleSyntax": true,
     "skipLibCheck": true
   }
 }
