@@ -8,7 +8,6 @@ A modern TypeScript starter template for quickly bootstrapping new projects with
 - Pre-configured build scripts (ESM & CJS)
 - Linting and formatting (ESLint, Prettier)
 - Unit testing (Vitest)
-- Typedoc documentation
 - GitHub Actions CI workflow
 
 ## Getting Started

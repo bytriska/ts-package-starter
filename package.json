@@ -27,6 +27,7 @@
     "dist/"
   ],
   "scripts": {
+    "prebuild": "pnpm test:types",
     "build": "tsup-node",
     "prepublishOnly": "pnpm build",
     "release": "bumpp && pnpm publish --access public",
