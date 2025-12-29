@@ -48,11 +48,8 @@
     "pre-commit": "pnpm lint-staged"
   },
   "lint-staged": {
-    "*.{js,ts,cjs,mjs}": [
+    "*.{js,ts,cjs,mjs,json,yaml,md}": [
       "eslint --fix",
-      "prettier --write"
-    ],
-    "*.{json,yaml,md}": [
       "prettier --write"
     ]
   }
