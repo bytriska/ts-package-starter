@@ -26,8 +26,8 @@
   "scripts": {
     "build": "tsup-node",
     "release": "pnpm test && bumpp && pnpm publish --access public",
-    "lint": "eslint . && prettier --check src test",
-    "lint:fix": "eslint . --fix && prettier --write src test",
+    "lint": "eslint . && prettier --check .",
+    "lint:fix": "eslint --fix . && prettier --write .",
     "test": "vitest run --typecheck --coverage",
     "prepare": "simple-git-hooks"
   },
