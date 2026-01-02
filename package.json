@@ -2,7 +2,7 @@
   "name": "@bytriska/ts-package-starter",
   "type": "module",
   "version": "0.0.0",
-  "packageManager": "pnpm@10.26.2",
+  "packageManager": "pnpm@10.27.0",
   "description": "A TypeScript package starter template with monorepo support",
   "author": "Triska Mahfud K (https://github.com/bytriska)",
   "license": "MIT",
@@ -33,8 +33,8 @@
     "prepare": "simple-git-hooks"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^4.19.0",
-    "@types/node": "^24.10.4",
+    "@antfu/eslint-config": "^6.7.3",
+    "@types/node": "^25.0.3",
     "@vitest/coverage-v8": "^4.0.16",
     "bumpp": "^10.3.2",
     "eslint": "^9.39.2",
