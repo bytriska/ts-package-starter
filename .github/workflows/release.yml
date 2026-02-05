@@ -13,21 +13,19 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write # to create releases
-      # id-token: write # uncomment if you use OIDC for npm provenance
+      # id-token: write # to use OIDC for npm provenance
     steps:
-      - name: checkout
+      - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - name: setup pnpm
+      - name: Setup pnpm
         uses: pnpm/action-setup@v4
-      - name: setup node.js
+      - name: Setup node.js
         uses: actions/setup-node@v4
         with:
           node-version: lts/*
           registry-url: https://registry.npmjs.org
           cache: pnpm
-      - name: generate changelog
+      - name: Generate changelog
         run: pnpm dlx changelogithub
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -35,7 +33,7 @@ jobs:
       # # Uncomment the following lines to publish to npm on CI
       #
       # - run: pnpm install --frozen-lockfile
-      # - run: pnpm publish -r --access public
+      # - run: pnpm publish -r --access public --no-git-checks
       #   env:
       #     NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
       #     NPM_CONFIG_PROVENANCE: true
