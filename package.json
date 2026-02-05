@@ -3,8 +3,12 @@
   "type": "module",
   "version": "0.0.0",
   "packageManager": "pnpm@10.27.0",
-  "description": "A TypeScript package starter template with monorepo support",
-  "author": "Triska Mahfud K (https://github.com/bytriska)",
+  "description": "Use this template to quickly start a project with typescript and pnpm",
+  "author": {
+    "name": "Triska Mahfud K",
+    "email": "im.triskuy@gmail.com",
+    "url": "https://github.com/bytriska"
+  },
   "license": "MIT",
   "funding": "https://github.com/sponsors/bytriska",
   "homepage": "https://github.com/bytriska/ts-package-starter#readme",
@@ -15,22 +19,29 @@
   "bugs": "https://github.com/bytriska/ts-package-starter/issues",
   "keywords": [],
   "exports": {
-    "types": "./dist/index.d.ts",
-    "import": "./dist/index.mjs",
-    "require": "./dist/index.cjs"
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
   },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
-    "dist/"
+    "dist"
   ],
   "scripts": {
-    "build": "tsup-node",
-    "release": "pnpm test && bumpp && pnpm publish --access public",
-    "lint": "eslint . && prettier --check .",
-    "lint:fix": "eslint --fix . && prettier --write .",
-    "test": "vitest",
+    "build": "tsup src/index.ts --dts --format cjs,esm --clean --shims --minify",
+    "start": "node ./dist/index.js",
+    "release": "pnpm test && bumpp",
+    "lint": "eslint --cache . && prettier --cache --check .",
+    "lint:fix": "eslint --cache --fix . && prettier --cache --write .",
+    "test": "vitest run",
     "test:coverage": "vitest run --coverage",
     "prepare": "simple-git-hooks"
+  },
+  "dependencies": {
+    "lint-staged": "^16.2.7"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^6.7.3",
@@ -38,7 +49,6 @@
     "@vitest/coverage-v8": "^4.0.16",
     "bumpp": "^10.3.2",
     "eslint": "^9.39.2",
-    "lint-staged": "^16.2.7",
     "prettier": "3.3.3",
     "simple-git-hooks": "^2.13.1",
     "tsup": "^8.5.1",
