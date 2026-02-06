@@ -15,7 +15,7 @@ Use this template to quickly set up a typescript package with pre-configured bui
 
    ```bash
    corepack enable
-   corepack prepare pnpm@latest --activate
+   corepack prepare --activate
    ```
 
 3. **Install dependencies:**
